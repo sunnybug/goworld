@@ -10,7 +10,7 @@ import (
 
 	"os"
 
-	"github.com/xiaonanln/goTimer"
+	timer "github.com/xiaonanln/goTimer"
 	"github.com/xiaonanln/goworld"
 	"github.com/xiaonanln/goworld/engine/common"
 	"github.com/xiaonanln/goworld/engine/entity"
@@ -527,7 +527,7 @@ func (e *clientEntity) findAttrByPath(path []interface{}) (attr interface{}, par
 			key := path[i].(string)
 			attr = mapattr[key]
 		} else if listattr, ok := attr.([]interface{}); ok {
-			index := path[i].(int64)
+			index := typeconv.Int(path[i])
 			attr = listattr[index]
 		} else {
 			gwlog.Panicf("Attr is neither map nor list: %T", attr)

@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/xiaonanln/goTimer"
+	timer "github.com/xiaonanln/goTimer"
 	"github.com/xiaonanln/goworld"
 	"github.com/xiaonanln/goworld/engine/gwlog"
 	"github.com/xiaonanln/goworld/ext/pubsub"
@@ -52,8 +52,8 @@ func checkServerStarted() {
 		timer.AddCallback(time.Millisecond*1000, checkServerStarted)
 	}
 }
-
 func isAllServicesReady() bool {
+
 	for _, serviceName := range _SERVICE_NAMES {
 		if goworld.GetServiceEntityID(serviceName).IsNil() {
 			gwlog.Infof("%s is not ready ...", serviceName)

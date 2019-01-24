@@ -1,0 +1,18 @@
+{
+    "files.autoSave": "onFocusChange",
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    //  "go.formatTool": "goreturns",
+    "go.goroot": "C:/Go",
+    "go.gopath": "g:/code_new/xPriviteTool/go/demo/goworld_demo/",
+    // 开启这个后，反而GOPATH为空
+    // "go.inferGopath": true,
+    "go.gocodeAutoBuild": true,
+    "git.ignoreLimitWarning": true,
+    "debug.node.autoAttach": "off"
+
+}

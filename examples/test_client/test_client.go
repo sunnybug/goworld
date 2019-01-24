@@ -35,7 +35,7 @@ var (
 func parseArgs() {
 	flag.BoolVar(&quiet, "quiet", false, "run client quietly with much less output")
 	flag.StringVar(&configFile, "configfile", "", "set config file path")
-	flag.IntVar(&numClients, "N", 1000, "Number of clients")
+	flag.IntVar(&numClients, "N", 1, "Number of clients")
 	flag.IntVar(&startClientId, "S", 1, "Start ID of clients")
 	flag.StringVar(&serverHost, "server", "localhost", "replace server address")
 	flag.BoolVar(&useWebSocket, "ws", false, "use WebSocket to connect server")
