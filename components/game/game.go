@@ -21,7 +21,7 @@ import (
 
 	"context"
 
-	"github.com/xiaonanln/goworld/components/game/lbc"
+	gamelbc "github.com/xiaonanln/goworld/components/game/lbc"
 	"github.com/xiaonanln/goworld/engine/binutil"
 	"github.com/xiaonanln/goworld/engine/common"
 	"github.com/xiaonanln/goworld/engine/config"
@@ -75,6 +75,8 @@ func Run() {
 	if configFile != "" {
 		config.SetConfigFile(configFile)
 	}
+
+	binutil.SetupGWLog(fmt.Sprintf("game%d", gameid), logLevel, "game.log", true)
 
 	if gameid <= 0 {
 		gwlog.Errorf("gameid %d is not valid, should be positive", gameid)

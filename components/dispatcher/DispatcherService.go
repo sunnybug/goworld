@@ -951,7 +951,7 @@ func (service *DispatcherService) handleGameLBCInfo(dcp *dispatcherClientProxy, 
 	// handle game LBC info from game
 	var lbcinfo proto.GameLBCInfo
 	packet.ReadData(&lbcinfo)
-	gwlog.Debugf("Game %d Load Balancing Info: %+v", dcp.gameid, lbcinfo)
+	// gwlog.Debugf("Game %d Load Balancing Info: %+v", dcp.gameid, lbcinfo)
 	lbcinfo.CPUPercent *= 1 + (rand.Float64() * 0.1) // multiply CPUPercent by a random factor 1.0 ~ 1.1
 	gdi := service.games[dcp.gameid]
 	gdi.lbcheapentry.update(lbcinfo)

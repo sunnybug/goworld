@@ -2,5 +2,4 @@
     "go.gopath": "${workspaceRoot}/../../../../../../",
     // 开启这个后，反而GOPATH为空
     // "go.inferGopath": true,
-    "git.ignoreLimitWarning": true,
 }
